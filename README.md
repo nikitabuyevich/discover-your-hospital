@@ -1,1 +1,1 @@
-# hackillinois-2018
+# HackIllinois 2018
