@@ -1,0 +1,30 @@
+export class Hcahps {
+  patientSurveyId: number;
+  address: string;
+  city: string;
+  countyName: string;
+  hcahpsAnswerDescription: string;
+  hcahpsAnswerPercent: string;
+  hcahpsLinearMeanValue: string;
+  hcahpsMeasureId: string;
+  hcahpsQuestion: string;
+  hospitalName: string;
+  locationJson: string;
+  location: Location;
+  locationAddress: string;
+  locationCity: string;
+  locationState: string;
+  measureEndDate: Date;
+  measureStartDate: Date;
+  numberOfCompletedSurveys: string;
+  patientSurveyStarRating: string;
+  phoneNumber: string;
+  providerId: string;
+  state: string;
+  surveyResponseRatePercent: string;
+  zipCode: string;
+  numberOfCompletedSurveysFootnote: string;
+  patientSurveyStarRatingFootnote: string;
+  surveyResponseRatePercentFootnote: string;
+  hcahpsAnswerPercentFootnote: string;
+}

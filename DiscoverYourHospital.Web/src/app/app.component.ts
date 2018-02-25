@@ -2,7 +2,6 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
 import { User } from './models/user.model';
-import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +10,7 @@ import { AuthenticationService } from './services/authentication.service';
 })
 export class AppComponent {
   title = 'Discover Your Hospital';
-  subtitle = 'Find the best hospital that meets your needs'
+  subtitle = 'Find the best hospital that meets your needs';
 
   currentYear = new Date();
 

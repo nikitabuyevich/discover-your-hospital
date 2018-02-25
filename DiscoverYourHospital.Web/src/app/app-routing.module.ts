@@ -5,9 +5,11 @@ import { LicensesComponent } from './licenses/licenses.component';
 import { LicenseDetailComponent } from './license-detail/license-detail.component';
 import { LicenseAddComponent } from './license-add/license-add.component';
 import { NugetPackagesComponent } from './nuget-packages/nuget-packages.component';
+import { HcahpsComponent } from './hcahps/hcahps.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/licenses', pathMatch: 'full' },
+  { path: '', redirectTo: '/hcahps', pathMatch: 'full' },
+  { path: 'hcahps', component: HcahpsComponent },
   { path: 'packages', component: NugetPackagesComponent },
   { path: 'licenses', component: LicensesComponent },
   { path: 'licenses/add', component: LicenseAddComponent },
@@ -18,5 +20,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule]
 })
-
-export class AppRoutingModule { }
+export class AppRoutingModule {}

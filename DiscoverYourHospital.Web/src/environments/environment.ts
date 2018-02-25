@@ -8,5 +8,6 @@ export const environment = {
   licensesUrl: 'http://localhost:36861/licenses',
   packagesUrl: 'http://localhost:36861/packages',
   authenticationUrl: 'http://localhost:36861/authentication',
-  statusUrl: 'http://localhost:36861/log'
+  statusUrl: 'http://localhost:36861/log',
+  hcahpsUrl: 'http://default-environment.fba4zvppun.us-east-2.elasticbeanstalk.com/api/hcahps'
 };

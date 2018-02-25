@@ -41,8 +41,10 @@ import { NugetPackagesComponent } from './nuget-packages/nuget-packages.componen
 import { LicenseDetailComponent } from './license-detail/license-detail.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { LicenseAddComponent } from './license-add/license-add.component';
+import { HcahpsComponent } from './hcahps/hcahps.component';
 import { LicenseService } from './services/license.service';
 import { PackageService } from './services/package.service';
+import { HcahpsService } from './services/hcahps.service';
 import { AuthenticationService } from './services/authentication.service';
 import { FilterByPipe } from './pipes/filter.pipe';
 import { MomentModule } from 'angular2-moment';
@@ -54,6 +56,7 @@ import { OrderModule } from 'ngx-order-pipe';
     LicensesComponent,
     NugetPackagesComponent,
     LicenseDetailComponent,
+    HcahpsComponent,
     LicenseAddComponent,
     NotificationsComponent,
     Autosize,
@@ -80,7 +83,14 @@ import { OrderModule } from 'ngx-order-pipe';
     SimpleNotificationsModule.forRoot(),
     CommonModule
   ],
-  providers: [LicenseService, PackageService, AuthenticationService, NotificationsComponent, CookieService],
+  providers: [
+    LicenseService,
+    PackageService,
+    AuthenticationService,
+    HcahpsService,
+    NotificationsComponent,
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

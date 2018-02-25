@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="col-12">
+    <!-- DEFAULT VIEW -->
+    <div class="input-group main-search">
+      <span id="title-span" class="input-group-addon shadow-base button-left">Search by hcahps Name</span>
+      <input #input class="form-control fix-input-height shadow-input-light" type="text" placeholder="Search here..." [(ngModel)]="search">
+    </div>
+    <div class="alert shadow-hard text-center margin-top" role="alert" *ngIf="allHcahps.length == 0 && !app.showSpinner">
+      There are
+      <strong>no hcahpss</strong> to display.
+      <span>
+        <a [routerLink]="['add']" queryParamsHandling="merge" class="alert-link">Add a hcahps</a> to get started.
+      </span>
+    </div>
+    <div class="shadow-hard" *ngIf="allHcahps.length > 0 && !app.showSpinner">
+      <table class="table table-hover">
+        <thead>
+          <tr class="text-center">
+            <th class="no-select" [class.active]="order === 'status'" (click)="setOrder('status')" style="width: 7%">
+              Status
+              <span [hidden]="reverse">▼</span>
+              <span [hidden]="!reverse">▲</span>
+            </th>
+            <th class="no-select text-left" [class.active]="order === 'hcahpsNameAndVersion'" (click)="setOrder('hcahpsNameAndVersion')">
+              hcahps Name
+              <span [hidden]="reverse">▼</span>
+              <span [hidden]="!reverse">▲</span>
+            </th>
+            <th class="no-select" [class.active]="order === 'approvedForInternalUse'" (click)="setOrder('approvedForInternalUse')" style="width: 11%">
+              Internal Use
+              <span [hidden]="reverse">▼</span>
+              <span [hidden]="!reverse">▲</span>
+            </th>
+            <th class="no-select" [class.active]="order === 'approvedForExternalUse'" (click)="setOrder('approvedForExternalUse')" style="width: 11%">
+              External Use
+              <span [hidden]="reverse">▼</span>
+              <span [hidden]="!reverse">▲</span>
+            </th>
+            <th class="normal-pointer" style="width: 8%">
+              Modify
+            </th>
+            <th class="normal-pointer" style="width: 15%">
+              Last Updated
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let hcahps of allHcahps | filterBy: {hcahpsQuestion: search} | orderBy: order : reverse : true | paginate: { itemsPerPage: 10, currentPage: page }"
+            class="text-center">
+            <td class="text-center status">
+              <i class="fa fa-eye" aria-hidden="true" *ngIf="hcahps.status === 1" tooltip="Reviewed" container="body"></i>
+              <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="hcahps.status === 0" tooltip="Needs review" container="body"></i>
+            </td>
+            <td class="text-left">{{ hcahps?.hcahpsQuestion }}</td>
+            <!-- <td *ngIf="hcahps.approvedForInternalUse">
+                            <i class="fa fa-check" aria-hidden="true" tooltip="This hcahps is approved for internal use" container="body"></i>
+                        </td>
+                        <td *ngIf="!hcahps.approvedForInternalUse">
+                            <i class="fa fa-times" aria-hidden="true" tooltip="This hcahps is not approved for internal use" container="body"></i>
+                        </td>
+                        <td *ngIf="hcahps.approvedForExternalUse">
+                            <i class="fa fa-check" aria-hidden="true" tooltip="This hcahps is approved for external use" container="body"></i>
+                        </td>
+                        <td *ngIf="!hcahps.approvedForExternalUse">
+                            <i class="fa fa-times" aria-hidden="true" tooltip="This hcahps is not approved for external use" container="body"></i>
+                        </td>
+                        <td>
+                            <i id="modify-status" class="fa fa-bell-o" aria-hidden="true" (click)="setStatusModal(hcahps)" tooltip="Update status" container="body"></i>
+                            <i class="fa fa-pencil-square-o modify" aria-hidden="true" (click)="gotoDetail(hcahps)" tooltip="Update hcahps" container="body"></i>
+                            <i id="modify-delete" class="fa fa-trash-o delete-hcahps" aria-hidden="true" (click)="setDeleteModal(hcahps)" tooltip="Delete hcahps" container="body"></i>
+                        </td> -->
+            <!-- <td class="text-center last-updated">
+                            <div class="updated-date" *ngIf="hcahps.lastUpdated">
+                                {{ hcahps.lastUpdated | amTimeAgo }}
+                            </div>
+                            <div class="updated-date" *ngIf="!hcahps.lastUpdated">
+                                -
+                            </div>
+                            <div *ngIf="hcahps.lastModifiedBy">
+                                <span class="updated-by">by</span>
+                                <span class="updated-person">{{ hcahps.lastModifiedBy }}</span>
+                            </div>
+                        </td> -->
+          </tr>
+        </tbody>
+      </table>
+      <div class="row" style="width: 100%">
+        <div class="col-12 text-center">
+          <pagination-controls (pageChange)="page = $event" autoHide="true"></pagination-controls>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
