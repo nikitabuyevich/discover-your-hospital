@@ -5,10 +5,18 @@ namespace DiscoverYourHospital.API.Helpers
 {
     public interface IRepository<T> where T : BaseEntity
     {
-        void Add(T item);
-        void Remove(int id);
-        void Update(T item);
-        T FindByID(int id);
-        IEnumerable<T> FindAll();
+        IEnumerable<T> GetAllRatings();
+        IEnumerable<T> GetOverallHospital();
+        IEnumerable<T> GetDoctorCommunication();
+        IEnumerable<T> GetRecommendedHospital();
+        IEnumerable<T> GetSummary();
+        IEnumerable<T> GetPainManagement();
+        IEnumerable<T> GetDischargeInformation();
+        IEnumerable<T> GetCareTransition();
+        IEnumerable<T> GetNurseCommunication();
+        IEnumerable<T> GetQuietness();
+        IEnumerable<T> GetCleanliness();
+        IEnumerable<T> GetStaffResponsiveness();
+        IEnumerable<T> GetCommunicationAboutMedicines();
     }
 }

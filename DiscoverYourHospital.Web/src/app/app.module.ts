@@ -49,6 +49,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { FilterByPipe } from './pipes/filter.pipe';
 import { MomentModule } from 'angular2-moment';
 import { OrderModule } from 'ngx-order-pipe';
+import { SafePipe } from './pipes/safe.pipe';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { OrderModule } from 'ngx-order-pipe';
     LicenseAddComponent,
     NotificationsComponent,
     Autosize,
-    FilterByPipe
+    FilterByPipe,
+    SafePipe
   ],
   imports: [
     BrowserModule,

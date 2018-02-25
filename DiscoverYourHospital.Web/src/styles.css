@@ -16,7 +16,7 @@ select,
 textarea {
   font-family: 'Open Sans', Helvetica, sans;
   height: 100%;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 textarea::placeholder {
@@ -765,4 +765,22 @@ table {
 .bootstrap-switch-false {
   background-color: #ff4f4f !important;
   color: #fff;
+}
+
+.table thead th {
+  vertical-align: middle !important;
+}
+
+.table thead th:hover {
+  cursor: pointer !important;
+  background-color: #31b0d5 !important;
+  color: #fff;
+}
+
+.box-title {
+  background-color: #31b0d5 !important;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 6px;
+  text-align: center;
 }

@@ -1,86 +1,131 @@
 <div class="container">
   <div class="col-12">
     <!-- DEFAULT VIEW -->
-    <div class="input-group main-search">
-      <span id="title-span" class="input-group-addon shadow-base button-left">Search by hcahps Name</span>
-      <input #input class="form-control fix-input-height shadow-input-light" type="text" placeholder="Search here..." [(ngModel)]="search">
+    <div class="box-title">
+      Data analyzed:
+      <strong>The average rating of every surveyed question.</strong>
     </div>
-    <div class="alert shadow-hard text-center margin-top" role="alert" *ngIf="allHcahps.length == 0 && !app.showSpinner">
+    <iframe class="shadow-hard" width="100%" height="400" frameBorder="0" [src]="'../../assets/hospital_map.html' | safe"></iframe>
+    <div class="input-group main-search">
+      <span id="title-span" class="input-group-addon shadow-base button-left">Filter all columns</span>
+      <input #input class="form-control fix-input-height shadow-input-light" type="text" placeholder="Search..." [(ngModel)]="search">
+    </div>
+    <div class="alert shadow-hard text-center margin-top" role="alert" *ngIf="hcahpsData.length == 0 && !app.showSpinner">
       There are
       <strong>no hcahpss</strong> to display.
       <span>
         <a [routerLink]="['add']" queryParamsHandling="merge" class="alert-link">Add a hcahps</a> to get started.
       </span>
     </div>
-    <div class="shadow-hard" *ngIf="allHcahps.length > 0 && !app.showSpinner">
+
+    <div class="shadow-hard" *ngIf="hcahpsData.length > 0 && !app.showSpinner" style="margin-top: 10px;">
       <table class="table table-hover">
         <thead>
           <tr class="text-center">
-            <th class="no-select" [class.active]="order === 'status'" (click)="setOrder('status')" style="width: 7%">
-              Status
-              <span [hidden]="reverse">▼</span>
-              <span [hidden]="!reverse">▲</span>
+            <th class="no-select text-center" [class.active]="order === 'hospitalName'" (click)="setOrder('hospitalName')">
+              Hospital Name
             </th>
-            <th class="no-select text-left" [class.active]="order === 'hcahpsNameAndVersion'" (click)="setOrder('hcahpsNameAndVersion')">
-              hcahps Name
-              <span [hidden]="reverse">▼</span>
-              <span [hidden]="!reverse">▲</span>
+            <th class="no-select text-center" [class.active]="order === 'patientSurveyStarRating'" (click)="setOrder('patientSurveyStarRating')">
+              Patient Rating
             </th>
-            <th class="no-select" [class.active]="order === 'approvedForInternalUse'" (click)="setOrder('approvedForInternalUse')" style="width: 11%">
-              Internal Use
-              <span [hidden]="reverse">▼</span>
-              <span [hidden]="!reverse">▲</span>
+            <th class="no-select text-center" [class.active]="order === 'surveyResponseRatePercent'" (click)="setOrder('surveyResponseRatePercent')">
+              Survey Response %
             </th>
-            <th class="no-select" [class.active]="order === 'approvedForExternalUse'" (click)="setOrder('approvedForExternalUse')" style="width: 11%">
-              External Use
-              <span [hidden]="reverse">▼</span>
-              <span [hidden]="!reverse">▲</span>
+            <th class="no-select text-center" [class.active]="order === 'phoneNumber'" (click)="setOrder('phoneNumber')">
+              Phone Number
             </th>
-            <th class="normal-pointer" style="width: 8%">
-              Modify
+            <th class="no-select text-center" [class.active]="order === 'address'" (click)="setOrder('address')">
+              Address
             </th>
-            <th class="normal-pointer" style="width: 15%">
-              Last Updated
+            <th class="no-select text-center" [class.active]="order === 'city'" (click)="setOrder('city')">
+              City
+            </th>
+            <th class="no-select text-center" [class.active]="order === 'state'" (click)="setOrder('state')">
+              State
+            </th>
+            <th class="no-select text-center" [class.active]="order === 'zipCode'" (click)="setOrder('zipCode')">
+              Zip Code
+            </th>
+            <th class="no-select text-center" [class.active]="order === 'countyName'" (click)="setOrder('countyName')">
+              County
+            </th>
+            <th class="no-select text-center" [class.active]="order === 'location'" (click)="setOrder('location')">
+              Long
+            </th>
+            <th class="no-select text-center" [class.active]="order === 'location'" (click)="setOrder('location')">
+              Lan
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let hcahps of allHcahps | filterBy: {hcahpsQuestion: search} | orderBy: order : reverse : true | paginate: { itemsPerPage: 10, currentPage: page }"
+          <tr *ngFor="let hcahps of hcahpsData | filterBy: {search: search} | orderBy: order : reverse : true | paginate: { itemsPerPage: 10, currentPage: page }"
             class="text-center">
-            <td class="text-center status">
-              <i class="fa fa-eye" aria-hidden="true" *ngIf="hcahps.status === 1" tooltip="Reviewed" container="body"></i>
-              <i class="fa fa-eye-slash" aria-hidden="true" *ngIf="hcahps.status === 0" tooltip="Needs review" container="body"></i>
+            <td class="updated-date" *ngIf="hcahps.hospitalName">
+              <a class="link" href="https://www.google.com/search?q={{ hcahps?.hospitalName }}" target="_blank">{{ hcahps?.hospitalName }}</a>
             </td>
-            <td class="text-left">{{ hcahps?.hcahpsQuestion }}</td>
-            <!-- <td *ngIf="hcahps.approvedForInternalUse">
-                            <i class="fa fa-check" aria-hidden="true" tooltip="This hcahps is approved for internal use" container="body"></i>
-                        </td>
-                        <td *ngIf="!hcahps.approvedForInternalUse">
-                            <i class="fa fa-times" aria-hidden="true" tooltip="This hcahps is not approved for internal use" container="body"></i>
-                        </td>
-                        <td *ngIf="hcahps.approvedForExternalUse">
-                            <i class="fa fa-check" aria-hidden="true" tooltip="This hcahps is approved for external use" container="body"></i>
-                        </td>
-                        <td *ngIf="!hcahps.approvedForExternalUse">
-                            <i class="fa fa-times" aria-hidden="true" tooltip="This hcahps is not approved for external use" container="body"></i>
-                        </td>
-                        <td>
-                            <i id="modify-status" class="fa fa-bell-o" aria-hidden="true" (click)="setStatusModal(hcahps)" tooltip="Update status" container="body"></i>
-                            <i class="fa fa-pencil-square-o modify" aria-hidden="true" (click)="gotoDetail(hcahps)" tooltip="Update hcahps" container="body"></i>
-                            <i id="modify-delete" class="fa fa-trash-o delete-hcahps" aria-hidden="true" (click)="setDeleteModal(hcahps)" tooltip="Delete hcahps" container="body"></i>
-                        </td> -->
-            <!-- <td class="text-center last-updated">
-                            <div class="updated-date" *ngIf="hcahps.lastUpdated">
-                                {{ hcahps.lastUpdated | amTimeAgo }}
-                            </div>
-                            <div class="updated-date" *ngIf="!hcahps.lastUpdated">
-                                -
-                            </div>
-                            <div *ngIf="hcahps.lastModifiedBy">
-                                <span class="updated-by">by</span>
-                                <span class="updated-person">{{ hcahps.lastModifiedBy }}</span>
-                            </div>
-                        </td> -->
+            <td class="updated-date" *ngIf="!hcahps.hospitalName">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.patientSurveyStarRating">
+              {{ hcahps?.patientSurveyStarRating }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.patientSurveyStarRating">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.surveyResponseRatePercent">
+              {{ hcahps?.surveyResponseRatePercent }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.surveyResponseRatePercent">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.phoneNumber">
+              {{ hcahps?.phoneNumber }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.phoneNumber">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.address">
+              {{ hcahps?.address }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.address">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.city">
+              {{ hcahps?.city }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.city">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.state">
+              {{ hcahps?.state }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.state">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.zipCode">
+              {{ hcahps?.zipCode }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.zipCode">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.countyName">
+              {{ hcahps?.countyName }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.countyName">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.location">
+              {{ hcahps?.location.coordinates[0] }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.location">
+              -
+            </td>
+            <td class="updated-date" *ngIf="hcahps.location">
+              {{ hcahps?.location.coordinates[1] }}
+            </td>
+            <td class="updated-date" *ngIf="!hcahps.location">
+              -
+            </td>
           </tr>
         </tbody>
       </table>

@@ -4,7 +4,7 @@ namespace DiscoverYourHospital.API.Models
 {
     public class Hcahps : BaseEntity
     {
-        public int PatientSurveyId { get; set; }
+        public int? PatientSurveyId { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string CountyName { get; set; }
@@ -19,8 +19,8 @@ namespace DiscoverYourHospital.API.Models
         public string LocationAddress { get; set; }
         public string LocationCity { get; set; }
         public string LocationState { get; set; }
-        public DateTime MeasureEndDate { get; set; }
-        public DateTime MeasureStartDate { get; set; }
+        public DateTime? MeasureEndDate { get; set; }
+        public DateTime? MeasureStartDate { get; set; }
         public string NumberOfCompletedSurveys { get; set; }
         public string PatientSurveyStarRating { get; set; }
         public string PhoneNumber { get; set; }

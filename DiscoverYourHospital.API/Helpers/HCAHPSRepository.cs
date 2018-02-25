@@ -26,38 +26,12 @@ namespace DiscoverYourHospital.API.Helpers
             }
         }
 
-        public void Add(Hcahps item)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public IEnumerable<Hcahps> FindAll()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Hcahps FindByID(int id)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        //public void Add(Product prod)
-        //{
-        //    using (IDbConnection dbConnection = Connection)
-        //    {
-        //        string sQuery = "INSERT INTO Products (Name, Quantity, Price)"
-        //                        + " VALUES(@Name, @Quantity, @Price)";
-        //        dbConnection.Open();
-        //        dbConnection.Execute(sQuery, prod);
-        //    }
-        //}
-
-        public IEnumerable<Hcahps> GetAll()
+        public IEnumerable<Hcahps> GetAllRatings()
         {
             using (IDbConnection dbConnection = Connection)
             {
                 dbConnection.Open();
-                var allHcahps = dbConnection.Query<Hcahps>(HcahpsSql.GetAll);
+                var allHcahps = dbConnection.Query<Hcahps>(HcahpsSql.GetAllRatings);
                 foreach (var hcahps in allHcahps)
                 {
                     if (!string.IsNullOrEmpty(hcahps.LocationJson))
@@ -69,48 +43,208 @@ namespace DiscoverYourHospital.API.Helpers
             }
         }
 
-        public void Remove(int id)
+        public IEnumerable<Hcahps> GetOverallHospital()
         {
-            throw new System.NotImplementedException();
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetOverallHospital);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
         }
 
-        public void Update(Hcahps item)
+        public IEnumerable<Hcahps> GetDoctorCommunication()
         {
-            throw new System.NotImplementedException();
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetDoctorCommunication);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
         }
 
-        //public Product GetByID(int id)
-        //{
-        //    using (IDbConnection dbConnection = Connection)
-        //    {
-        //        string sQuery = "SELECT * FROM Products"
-        //                       + " WHERE ProductId = @Id";
-        //        dbConnection.Open();
-        //        return dbConnection.Query<Product>(sQuery, new { Id = id }).FirstOrDefault();
-        //    }
-        //}
+        public IEnumerable<Hcahps> GetRecommendedHospital()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetRecommendedHospital);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
 
-        //public void Delete(int id)
-        //{
-        //    using (IDbConnection dbConnection = Connection)
-        //    {
-        //        string sQuery = "DELETE FROM Products"
-        //                     + " WHERE ProductId = @Id";
-        //        dbConnection.Open();
-        //        dbConnection.Execute(sQuery, new { Id = id });
-        //    }
-        //}
+        public IEnumerable<Hcahps> GetSummary()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetSummary);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
 
-        //public void Update(Product prod)
-        //{
-        //    using (IDbConnection dbConnection = Connection)
-        //    {
-        //        string sQuery = "UPDATE Products SET Name = @Name,"
-        //                       + " Quantity = @Quantity, Price= @Price"
-        //                       + " WHERE ProductId = @ProductId";
-        //        dbConnection.Open();
-        //        dbConnection.Query(sQuery, prod);
-        //    }
-        //}
+        public IEnumerable<Hcahps> GetPainManagement()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetPainManagement);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetDischargeInformation()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetDischargeInformation);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetCareTransition()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetCareTransition);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetNurseCommunication()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetNurseCommunication);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetQuietness()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetQuietness);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetCleanliness()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetCleanliness);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetStaffResponsiveness()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetStaffResponsiveness);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
+
+        public IEnumerable<Hcahps> GetCommunicationAboutMedicines()
+        {
+            using (IDbConnection dbConnection = Connection)
+            {
+                dbConnection.Open();
+                var allHcahpsQuestions = dbConnection.Query<Hcahps>(HcahpsSql.GetCommunicationAboutMedicines);
+                foreach (var hcahps in allHcahpsQuestions)
+                {
+                    if (!string.IsNullOrEmpty(hcahps.LocationJson))
+                    {
+                        hcahps.Location = JsonConvert.DeserializeObject<Location>(hcahps.LocationJson);
+                    }
+                }
+                return allHcahpsQuestions;
+            }
+        }
     }
 }

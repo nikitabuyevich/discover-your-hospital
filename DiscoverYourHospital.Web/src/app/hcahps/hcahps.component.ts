@@ -19,9 +19,9 @@ export class HcahpsComponent implements OnInit {
   @ViewChild('statusLicenseModal') statusLicenseModal: ModalDirective;
   @ViewChild('deleteLicenseModal') deleteLicenseModal: ModalDirective;
 
-  allHcahps: Hcahps[] = [];
+  hcahpsData: Hcahps[] = [];
 
-  order = 'patientSurveyId';
+  order = 'hcahpsQuestion';
   search = '';
 
   page = 1;
@@ -38,7 +38,6 @@ export class HcahpsComponent implements OnInit {
   }
 
   setOrder(value: string) {
-    console.log(this.allHcahps);
     if (this.order === value) {
       this.reverse = !this.reverse;
     }
@@ -56,11 +55,311 @@ export class HcahpsComponent implements OnInit {
     this.app.showSpinner = false;
   }
 
-  getAllHcahps() {
+  getAllRatings() {
     this.hcahpsService
-      .getAllHcahps()
+      .getAllRatings()
       .then(allHcahps => {
-        this.allHcahps = allHcahps;
+        this.hcahpsData = allHcahps;
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getOverallHospital() {
+    this.hcahpsService
+      .getOverallHospital()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getDoctorCommunication() {
+    this.hcahpsService
+      .getDoctorCommunication()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getRecommendedHospital() {
+    this.hcahpsService
+      .getRecommendedHospital()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getSummary() {
+    this.hcahpsService
+      .getSummary()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getPainManagement() {
+    this.hcahpsService
+      .getPainManagement()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getDischargeInformation() {
+    this.hcahpsService
+      .getDischargeInformation()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getCareTransition() {
+    this.hcahpsService
+      .getCareTransition()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getNurseCommunication() {
+    this.hcahpsService
+      .getNurseCommunication()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getQuietness() {
+    this.hcahpsService
+      .getQuietness()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getCleanliness() {
+    this.hcahpsService
+      .getCleanliness()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getStaffResponsiveness() {
+    this.hcahpsService
+      .getStaffResponsiveness()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
+        this.app.showSpinner = false;
+      })
+      .catch(err => {
+        this.handleError(err);
+      });
+  }
+
+  getCommunicationAboutMedicines() {
+    this.hcahpsService
+      .getCommunicationAboutMedicines()
+      .then(hcahpsData => {
+        for (let hcahps of this.hcahpsData) {
+          hcahps.search =
+            hcahps.address +
+            hcahps.city +
+            hcahps.countyName +
+            hcahps.hospitalName +
+            hcahps.patientSurveyStarRating +
+            hcahps.phoneNumber +
+            hcahps.state +
+            hcahps.surveyResponseRatePercent +
+            hcahps.zipCode;
+        }
+        this.hcahpsData = hcahpsData;
         this.app.showSpinner = false;
       })
       .catch(err => {
@@ -69,6 +368,6 @@ export class HcahpsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAllHcahps();
+    this.getAllRatings();
   }
 }
