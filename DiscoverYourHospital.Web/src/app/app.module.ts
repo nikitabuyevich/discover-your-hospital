@@ -1,3 +1,11 @@
+import { StaffResponsivenessComponent } from './staff-responsiveness/staff-responsiveness.component';
+import { CleanlinessComponent } from './cleanliness/cleanliness.component';
+import { CareTransitionComponent } from './care-transition/care-transition.component';
+import { DischargeInformationComponent } from './discharge-information/discharge-information.component';
+import { PainManagementComponent } from './pain-management/pain-management.component';
+import { RecommendedHospitalComponent } from './recommended-hospital/recommended-hospital.component';
+import { DoctorCommunicationComponent } from './doctor-communication/doctor-communication.component';
+import { OverallHospitalComponent } from './overall-hospital/overall-hospital.component';
 // Observable class extensions
 import 'rxjs/add/observable/of';
 import 'rxjs/add/observable/throw';
@@ -36,30 +44,33 @@ import { CookieService } from 'ng2-cookies';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 import { AppComponent } from './app.component';
-import { LicensesComponent } from './licenses/licenses.component';
-import { NugetPackagesComponent } from './nuget-packages/nuget-packages.component';
-import { LicenseDetailComponent } from './license-detail/license-detail.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
-import { LicenseAddComponent } from './license-add/license-add.component';
 import { HcahpsComponent } from './hcahps/hcahps.component';
-import { LicenseService } from './services/license.service';
-import { PackageService } from './services/package.service';
 import { HcahpsService } from './services/hcahps.service';
-import { AuthenticationService } from './services/authentication.service';
 import { FilterByPipe } from './pipes/filter.pipe';
 import { MomentModule } from 'angular2-moment';
 import { OrderModule } from 'ngx-order-pipe';
 import { SafePipe } from './pipes/safe.pipe';
+import { NurseCommunicationComponent } from './nurse-communication/nurse-communication.component';
+import { QuietnessComponent } from './quietness/quietness.component';
+import { CommunicationAboutMedicineComponent } from './communication-about-medicines/communication-about-medicines.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LicensesComponent,
-    NugetPackagesComponent,
-    LicenseDetailComponent,
     HcahpsComponent,
-    LicenseAddComponent,
+    CommunicationAboutMedicineComponent,
+    OverallHospitalComponent,
+    CareTransitionComponent,
+    StaffResponsivenessComponent,
+    CleanlinessComponent,
+    QuietnessComponent,
+    DoctorCommunicationComponent,
+    RecommendedHospitalComponent,
     NotificationsComponent,
+    NurseCommunicationComponent,
+    DischargeInformationComponent,
+    PainManagementComponent,
     Autosize,
     FilterByPipe,
     SafePipe
@@ -85,14 +96,7 @@ import { SafePipe } from './pipes/safe.pipe';
     SimpleNotificationsModule.forRoot(),
     CommonModule
   ],
-  providers: [
-    LicenseService,
-    PackageService,
-    AuthenticationService,
-    HcahpsService,
-    NotificationsComponent,
-    CookieService
-  ],
+  providers: [HcahpsService, NotificationsComponent, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -10,10 +10,10 @@ import { Hcahps } from './../models/hcahps.model';
 import { HcahpsService } from './../services/hcahps.service';
 
 @Component({
-  selector: 'app-hcahps',
-  templateUrl: './hcahps.component.html'
+  selector: 'app-nurse-communication',
+  templateUrl: './nurse-communication.component.html'
 })
-export class HcahpsComponent implements OnInit {
+export class NurseCommunicationComponent implements OnInit {
   hcahpsData: Hcahps[] = [];
 
   order = 'hospitalName';
@@ -50,11 +50,11 @@ export class HcahpsComponent implements OnInit {
     this.app.showSpinner = false;
   }
 
-  getAllRatings() {
+  getNurseCommunication() {
     this.hcahpsService
-      .getAllRatings()
-      .then(allHcahps => {
-        this.hcahpsData = allHcahps;
+      .getNurseCommunication()
+      .then(hcahpsData => {
+        this.hcahpsData = hcahpsData;
         for (let hcahps of this.hcahpsData) {
           hcahps.search =
             hcahps.address +
@@ -75,6 +75,6 @@ export class HcahpsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAllRatings();
+    this.getNurseCommunication();
   }
 }

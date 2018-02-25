@@ -10,10 +10,10 @@ import { Hcahps } from './../models/hcahps.model';
 import { HcahpsService } from './../services/hcahps.service';
 
 @Component({
-  selector: 'app-hcahps',
-  templateUrl: './hcahps.component.html'
+  selector: 'app-pain-management',
+  templateUrl: './pain-management.component.html'
 })
-export class HcahpsComponent implements OnInit {
+export class PainManagementComponent implements OnInit {
   hcahpsData: Hcahps[] = [];
 
   order = 'hospitalName';
@@ -50,11 +50,11 @@ export class HcahpsComponent implements OnInit {
     this.app.showSpinner = false;
   }
 
-  getAllRatings() {
+  getPainManagement() {
     this.hcahpsService
-      .getAllRatings()
-      .then(allHcahps => {
-        this.hcahpsData = allHcahps;
+      .getPainManagement()
+      .then(hcahpsData => {
+        this.hcahpsData = hcahpsData;
         for (let hcahps of this.hcahpsData) {
           hcahps.search =
             hcahps.address +
@@ -75,6 +75,6 @@ export class HcahpsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getAllRatings();
+    this.getPainManagement();
   }
 }

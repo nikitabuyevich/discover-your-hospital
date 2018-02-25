@@ -1,8 +1,6 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 
-import { User } from './models/user.model';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

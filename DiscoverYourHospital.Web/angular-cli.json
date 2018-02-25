@@ -14,7 +14,22 @@
       "tsconfig": "tsconfig.json",
       "prefix": "app",
       "mobile": false,
-      "styles": ["assets/bootstrap.min.css", "assets/hospital_map.html", "styles.css"],
+      "styles": [
+        "assets/bootstrap.min.css",
+        "assets/hospital_map.html",
+        "assets/care_transition.html",
+        "assets/cleanliness.html",
+        "assets/communication.html",
+        "assets/discharge.html",
+        "assets/nurse.html",
+        "assets/overall.html",
+        "assets/pain_management.html",
+        "assets/quietness.html",
+        "assets/recommend.html",
+        "assets/staff.html",
+        "assets/summary.html",
+        "styles.css"
+      ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
