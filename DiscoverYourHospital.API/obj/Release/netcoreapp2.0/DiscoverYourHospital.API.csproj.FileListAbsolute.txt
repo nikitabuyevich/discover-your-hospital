@@ -1,0 +1,10 @@
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\bin\Release\netcoreapp2.0\DiscoverYourHospital.API.deps.json
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\bin\Release\netcoreapp2.0\DiscoverYourHospital.API.runtimeconfig.json
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\bin\Release\netcoreapp2.0\DiscoverYourHospital.API.runtimeconfig.dev.json
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\bin\Release\netcoreapp2.0\DiscoverYourHospital.API.dll
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\bin\Release\netcoreapp2.0\DiscoverYourHospital.API.pdb
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\obj\Release\netcoreapp2.0\DiscoverYourHospital.API.csproj.CoreCompileInputs.cache
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\obj\Release\netcoreapp2.0\DiscoverYourHospital.API.AssemblyInfoInputs.cache
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\obj\Release\netcoreapp2.0\DiscoverYourHospital.API.AssemblyInfo.cs
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\obj\Release\netcoreapp2.0\DiscoverYourHospital.API.dll
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API\obj\Release\netcoreapp2.0\DiscoverYourHospital.API.pdb

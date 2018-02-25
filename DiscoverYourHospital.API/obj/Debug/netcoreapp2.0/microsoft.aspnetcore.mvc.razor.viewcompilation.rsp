@@ -1,0 +1,5 @@
+\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API
+--output-path=obj\Debug\netcoreapp2.0\
+--application-name=DiscoverYourHospital.API
+--content-root=\\Mac\Dropbox\discover-your-hospital\DiscoverYourHospital.API
+--file=

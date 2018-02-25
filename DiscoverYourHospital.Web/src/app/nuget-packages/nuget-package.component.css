@@ -1,0 +1,20 @@
+.container .fix-btn-height button {
+  height: 38px;
+}
+
+.card-title {
+  font-size: 1.05rem;
+}
+
+.label-text-url {
+  width: 90px !important;
+}
+
+.fa-cog {
+  top: 0;
+}
+
+.btn-licenseminder {
+  padding-top: 10px;
+  cursor: help;
+}
