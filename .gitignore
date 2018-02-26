@@ -43,3 +43,6 @@ Thumbs.db
 .vscode/
 
 __pycache__/
+
+# ignore appsettings file which has the DB connection info
+appsettings.json

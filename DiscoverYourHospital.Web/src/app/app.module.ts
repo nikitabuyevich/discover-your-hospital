@@ -54,6 +54,7 @@ import { SafePipe } from './pipes/safe.pipe';
 import { NurseCommunicationComponent } from './nurse-communication/nurse-communication.component';
 import { QuietnessComponent } from './quietness/quietness.component';
 import { CommunicationAboutMedicineComponent } from './communication-about-medicines/communication-about-medicines.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { CommunicationAboutMedicineComponent } from './communication-about-medic
     StaffResponsivenessComponent,
     CleanlinessComponent,
     QuietnessComponent,
+    SummaryComponent,
     DoctorCommunicationComponent,
     RecommendedHospitalComponent,
     NotificationsComponent,
