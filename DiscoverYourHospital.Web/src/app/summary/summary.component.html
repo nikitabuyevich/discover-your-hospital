@@ -1,11 +1,12 @@
 <div class="container">
   <div class="col-12">
-    <!-- DEFAULT VIEW -->
-    <div class="box-title">
-      Data analyzed:
-      <strong>The ratings of how well doctors delivered their summary.</strong>
+    <div class="shadow-hard">
+      <div class="box-title">
+        Data analyzed:
+        <strong>The ratings of how well doctors delivered their summary.</strong>
+      </div>
+      <iframe width="100%" height="400" frameBorder="0" [src]="'../../assets/summary.html' | safe"></iframe>
     </div>
-    <iframe class="shadow-hard" width="100%" height="400" frameBorder="0" [src]="'../../assets/summary.html' | safe"></iframe>
     <div class="input-group main-search">
       <span id="title-span" class="input-group-addon shadow-base button-left">Filter all columns</span>
       <input #input class="form-control fix-input-height shadow-input-light" type="text" placeholder="Search..." [(ngModel)]="search">
