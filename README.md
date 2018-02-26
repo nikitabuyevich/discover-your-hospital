@@ -10,9 +10,9 @@ The project ingested the public hospital patient survey API [HCAHPS](https://dev
 
 For ease of use, the web service platform is AWS. Everything is build around it.
 
-* AWS RDS for the PostgresSQL DB.
-* AWS Elastic Beanstalk for the .NET Core 2.0 back-end.
-* AWS S3 bucket for the Angular static web hosting front-end.
+* [AWS RDS](https://aws.amazon.com/rds/) for the PostgresSQL DB.
+* [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/) for the .NET Core 2.0 back-end.
+* [AWS S3](https://aws.amazon.com/s3/) bucket for the Angular static web hosting front-end.
 
 In terms of the data manipulation, Python was used as the primary source.
 
