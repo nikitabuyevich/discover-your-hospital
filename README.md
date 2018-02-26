@@ -4,6 +4,8 @@ A live demonstration of the website is available at [discoveryourhospital.com](h
 
 This project was initially developed by [Nikita Buyevich](https://www.linkedin.com/in/nikitabuyevich/) and [Danny Yoon](https://github.com/syoon46) in 36 hours at [HackIllinois 2018](https://hackillinois.org/).
 
+This project was the runner up winner of the "Grow Your Future" award presented by [John Deere](https://www.deere.com/en/index.html) at [HackIllinois 2018](https://hackillinois.org/).
+
 ## Architecture
 
 The project ingested the public hospital patient survey API [HCAHPS](https://dev.socrata.com/foundry/data.medicare.gov/rmgi-5fhi).
