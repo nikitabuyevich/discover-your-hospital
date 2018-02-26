@@ -4,7 +4,7 @@ A live demonstration of the website is available at [discoveryourhospital.com](h
 
 This project was initially developed by [Nikita Buyevich](https://www.linkedin.com/in/nikitabuyevich/) and [Danny Yoon](https://github.com/syoon46) in 36 hours at [HackIllinois 2018](https://hackillinois.org/).
 
-This project was the runner up winner of the "Grow Your Future" award presented by [John Deere](https://www.deere.com/en/index.html) at [HackIllinois 2018](https://hackillinois.org/).
+This project was the **runner up winner** of the **Grow Your Future** award presented by [John Deere](https://www.deere.com/en/index.html) at [HackIllinois 2018](https://hackillinois.org/).
 
 ## Architecture
 
@@ -23,7 +23,7 @@ In terms of the data manipulation, Python was used as the primary source.
 
 ## Future Expansion
 
-This project was the initial start of the basic needs that are met when an individual wants to answer the question of `Which hospital best meets my needs based on certain limited categories`.
+This project was the initial start of the basic needs that are met when an individual wants to answer the question of _Which hospital best meets my needs based on certain questions asked_.
 
 There is a lot of infrastructure here for future expansion. Here are some quick ideas that were mentioned to us when we presented the project.
 
