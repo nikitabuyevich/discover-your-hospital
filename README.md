@@ -35,7 +35,7 @@ There is a lot of infrastructure here for future expansion. Here are some quick 
 
 ## Development
 
-Interested in working on this project? Great. This project is completely open source. Feel free to use it as you see fit.
+This project is completely open source. Feel free to use it as you see fit.
 
 ## License
 
