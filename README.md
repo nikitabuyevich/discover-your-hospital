@@ -1,6 +1,8 @@
 # Discover Your Hospital
 
-A live demonstration of the website is available at [discoveryourhospital.com](https://discoveryourhospital.com/).
+Visit the website at [discoveryourhospital.com](https://discoveryourhospital.com/)
+
+Visit the API at [api.discoveryourhospital.com](https://api.discoveryourhospital.com/)
 
 This project was initially developed by [Nikita Buyevich](https://www.linkedin.com/in/nikitabuyevich/) and [Danny Yoon](https://github.com/syoon46) in 36 hours at [HackIllinois 2018](https://hackillinois.org/).
 
