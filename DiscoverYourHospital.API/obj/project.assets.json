@@ -6547,7 +6547,7 @@
       ]
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
-      "sha512": "O/lGuv/2mb0KcdqR4VVIKPXj0Bs1bMbpXFgmVNKO5asDDDXHsfUgC/Ln5OmA6Bw7JzgJIRIdIFLwLmCb2eyd8Q==",
+      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
       "type": "package",
       "path": "microsoft.extensions.platformabstractions/1.1.0",
       "files": [
@@ -7522,7 +7522,7 @@
       ]
     },
     "Remotion.Linq/2.1.1": {
-      "sha512": "a+iATNuDVnO9BKZbjWRbrFmYldoWO1o8ZjgX837R1JJB0+3IDU05xAzLFcd7tfSLXhEAWbqh/cCg3uq5+f8VIw==",
+      "sha512": "IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "type": "package",
       "path": "remotion.linq/2.1.1",
       "files": [
@@ -7626,7 +7626,7 @@
       ]
     },
     "runtime.native.System.Net.Security/4.3.0": {
-      "sha512": "urhc7B6zfp1xJPJACLlMonLsZHa/u0aoxow2GUR7IRbT3jUBw7zOAHYNZSGU0GAM+3wxFIy6Zy8ub4e5RGcqxw==",
+      "sha512": "M2nN92ePS8BgQ2oi6Jj3PlTUzadYSIWLdZrHY1n1ZcW9o4wAQQ6W+aQ2lfq1ysZQfVCgDwY58alUdowrzezztg==",
       "type": "package",
       "path": "runtime.native.system.net.security/4.3.0",
       "files": [
@@ -7938,7 +7938,7 @@
       ]
     },
     "System.AppContext/4.3.0": {
-      "sha512": "MlDiwMBEjW5+IBm4hvHEmUpmPTzG2viUy6GFrJGZnskYSCTtjF8zJZbznolpgH0eKYU9r1Eh5/Qwguat7D3XJw==",
+      "sha512": "fKC+rmaLfeIzUhagxY17Q9siv/sPrjjKcfNg1Ic8IlQkZLipo8ljcaZQu4VtI4Jqbzjc2VTjzGLF6WmsRXAEgA==",
       "type": "package",
       "path": "system.appcontext/4.3.0",
       "files": [
@@ -8326,7 +8326,7 @@
       ]
     },
     "System.Console/4.3.0": {
-      "sha512": "lYkasOSQIcOuHUUltZ1RY/So0VVjQxRZnQ3rL0aNea9WeuGX9ONQaUE+Wb5Q8sryGO508BW3B93inIk1orPClA==",
+      "sha512": "DHDrIxiqk1h03m6khKWV2X8p/uvN79rgSqpilL6uzpmSfxfU5ng8VcPtW4qsDsQDHiTv6IPV9TmD5M/vElPNLg==",
       "type": "package",
       "path": "system.console/4.3.0",
       "files": [
@@ -8428,7 +8428,7 @@
       ]
     },
     "System.Diagnostics.Contracts/4.3.0": {
-      "sha512": "S1X8uysI9GIvLVSnJerG+3pFfF+xcGIWVakZSIGUYD8W8YviFuq3Nyit1tCv54kLSOczfvw6QxtThSRT3M5lpA==",
+      "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
       "type": "package",
       "path": "system.diagnostics.contracts/4.3.0",
       "files": [
@@ -8617,7 +8617,7 @@
       ]
     },
     "System.Diagnostics.StackTrace/4.3.0": {
-      "sha512": "eIrfd3iP0Adl67mRnlElBhgXS4W8R4MksKPpYWQZO8JBZ56cLDXfVmKIgXKp1vcbhvNyjXZA5W89Hw695M9spg==",
+      "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
       "type": "package",
       "path": "system.diagnostics.stacktrace/4.3.0",
       "files": [
@@ -9470,7 +9470,7 @@
       ]
     },
     "System.Net.Http/4.3.0": {
-      "sha512": "069MnpB3OHbnusdIlEjcrlC47KE4GnTC4K6Htl7sUddwwcotA6f6h4A9Vc8Qbio5g7cZcAWc5U51fYLgBHLYQw==",
+      "sha512": "sYg+FtILtRQuYWSIAuNOELwVuVsxVyJGWQyOnlAzhV4xvhyFnON1bAzYYC+jjRW8JREM45R0R5Dgi8MTC5sEwA==",
       "type": "package",
       "path": "system.net.http/4.3.0",
       "files": [
@@ -9667,7 +9667,7 @@
       ]
     },
     "System.Net.Security/4.3.0": {
-      "sha512": "JRbMHTqgYPE0TPRb9XJi365MALvRwvgsBjcLrPSde1MukjCLbpe+ET74rbfGmmn2nQIBq1xZHQs7reMwgj2/xg==",
+      "sha512": "IgJKNfALqw7JRWp5LMQ5SWHNKvXVz094U6wNE3c1i8bOkMQvgBL+MMQuNt3xl9Qg9iWpj3lFxPZEY6XHmROjMQ==",
       "type": "package",
       "path": "system.net.security/4.3.0",
       "files": [
@@ -9707,7 +9707,7 @@
       ]
     },
     "System.Net.Sockets/4.3.0": {
-      "sha512": "WFDWecwr5Z9SAt7WN/WO87QCrtk3OU4LXkE9DS2OLEPHBP2Tl6EKrdgH4uKiHT0sL9p9Iz/qVj8IdoHh8QiAAA==",
+      "sha512": "m6icV6TqQOAdgt5N/9I5KNpjom/5NFtkmGseEH+AK/hny8XrytLH3+b5M8zL/Ycg3fhIocFpUMyl/wpFnVRvdw==",
       "type": "package",
       "path": "system.net.sockets/4.3.0",
       "files": [
@@ -11761,7 +11761,7 @@
       ]
     },
     "System.Threading.Tasks.Parallel/4.3.0": {
-      "sha512": "CttYZ5KdEMw3xrWVRnsGKkl1fMsCPFK/Gi1LIdRFC3EbZGYXO/JF34QnwzoNEwpZCqHlCsRHxX7M0Bxo6WEZ6A==",
+      "sha512": "cbjBNZHf/vQCfcdhzx7knsiygoCKgxL8mZOeocXZn5gWhCdzHIq6bYNKWX0LAJCWYP7bds4yBK8p06YkP0oa0g==",
       "type": "package",
       "path": "system.threading.tasks.parallel/4.3.0",
       "files": [
@@ -11816,7 +11816,7 @@
       ]
     },
     "System.Threading.Thread/4.3.0": {
-      "sha512": "UY32CFKz68sIUEETHPdx30wTy2lElOIN2Op1z/ju0f7doRuRQ8nr3VKVOReOxqrlYkr3uULoqUAnX5k4jZyIFA==",
+      "sha512": "OHmbT+Zz065NKII/ZHcH9XO1dEuLGI1L2k7uYss+9C1jLxTC9kTZZuzUOyXHayRk+dft9CiDf3I/QZ0t8JKyBQ==",
       "type": "package",
       "path": "system.threading.thread/4.3.0",
       "files": [
@@ -11854,7 +11854,7 @@
       ]
     },
     "System.Threading.ThreadPool/4.3.0": {
-      "sha512": "JciuBKLIUS+aPp8QQOpKIMBoFR4twxOPFLYmfrV0h3SXigQa0QieY4v+hWFrv/JDGiygRiUEpd0QqVqGxsfKCw==",
+      "sha512": "k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
       "type": "package",
       "path": "system.threading.threadpool/4.3.0",
       "files": [
@@ -11892,7 +11892,7 @@
       ]
     },
     "System.Threading.Timer/4.3.0": {
-      "sha512": "weqJYo2ldnHDJtM253NJk+x0RB2dtFMenwLgvNSeM0SQtMi9rHVjl/LaLU64v1gUSUi8bFTHijQwnuLDNOQD3w==",
+      "sha512": "Z6YfyYTCg7lOZjJzBjONJTFKGN9/NIYKSxhU5GRd+DTwHSZyvWp1xuI5aR+dLg+ayyC5Xv57KiY4oJ0tMO89fQ==",
       "type": "package",
       "path": "system.threading.timer/4.3.0",
       "files": [
@@ -12338,28 +12338,30 @@
     ]
   },
   "packageFolders": {
-    "/Users/Nikita/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Nikita\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Nikita/dropbox/discover-your-hospital/DiscoverYourHospital.API/DiscoverYourHospital.API.csproj",
+      "projectUniqueName": "\\\\Mac\\Dropbox\\discover-your-hospital\\DiscoverYourHospital.API\\DiscoverYourHospital.API.csproj",
       "projectName": "DiscoverYourHospital.API",
-      "projectPath": "/Users/Nikita/dropbox/discover-your-hospital/DiscoverYourHospital.API/DiscoverYourHospital.API.csproj",
-      "packagesPath": "/Users/Nikita/.nuget/packages/",
-      "outputPath": "/Users/Nikita/dropbox/discover-your-hospital/DiscoverYourHospital.API/obj/",
+      "projectPath": "\\\\Mac\\Dropbox\\discover-your-hospital\\DiscoverYourHospital.API\\DiscoverYourHospital.API.csproj",
+      "packagesPath": "C:\\Users\\Nikita\\.nuget\\packages\\",
+      "outputPath": "\\\\Mac\\Dropbox\\discover-your-hospital\\DiscoverYourHospital.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Nikita/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Nikita\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12376,26 +12378,26 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "2.0.0",
+            "autoReferenced": true
+          },
           "Dapper": {
             "target": "Package",
-            "version": "[1.50.4, )"
+            "version": "1.50.4"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "[2.0.5, )"
-          },
-          "Microsoft.NETCore.App": {
-            "target": "Package",
-            "version": "[2.0.0, )",
-            "autoReferenced": true
+            "version": "2.0.5"
           },
           "Newtonsoft.Json": {
             "target": "Package",
-            "version": "[11.0.1, )"
+            "version": "11.0.1"
           },
           "Npgsql": {
             "target": "Package",
-            "version": "[3.2.6, )"
+            "version": "3.2.6"
           }
         },
         "imports": [

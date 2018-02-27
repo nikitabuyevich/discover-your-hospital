@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using DiscoverYourHospital.API.Helpers;
+﻿using DiscoverYourHospital.API.Helpers;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
 namespace DiscoverYourHospital.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("")]
     public class HcahpsController : Controller
     {
         private readonly HCAHPSRepository hcahpsRepository;
