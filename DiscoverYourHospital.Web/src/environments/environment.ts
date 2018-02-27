@@ -9,5 +9,5 @@ export const environment = {
   packagesUrl: 'http://localhost:36861/packages',
   authenticationUrl: 'http://localhost:36861/authentication',
   statusUrl: 'http://localhost:36861/log',
-  hcahpsUrl: 'http://default-environment.fba4zvppun.us-east-2.elasticbeanstalk.com/api/hcahps'
+  hcahpsUrl: 'https://api.discoveryourhospital.com'
 };
